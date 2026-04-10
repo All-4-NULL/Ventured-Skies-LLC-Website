@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Featured Works - Ventured Skies LLC</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/screen.css" media="screen">
+
+  <style>
+    /* Specific Portfolio Grid Styles */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      padding: 40px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .portfolio-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transform-style: preserve-3d;
+      transition: border-color 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      border-color: #ff6b00;
+    }
+
+    /* "Under Development" Thematic Styling */
+    .processing-icon {
+      font-size: 3rem;
+      color: #555;
+      margin-bottom: 20px;
+      transform: translateZ(40px); /* 3D pop effect */
+    }
+
+    .processing-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      color: #888;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transform: translateZ(30px);
+    }
+
+    .processing-sub {
+      color: #555;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transform: translateZ(20px);
+    }
+
+    /* A subtle scanning line effect to make it look "high-tech" */
+    .scan-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(255, 107, 0, 0.5);
+      box-shadow: 0 0 10px #ff6b00;
+      animation: scan 3s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes scan {
+      0% { top: 0; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <canvas id="sparks"></canvas>
+
+  <header class="site-header">
+    <div class="brand-bar">
+      <div class="logo-wrap">
+        <img src="media/Ventured Skies Logo.png" alt="Ventured Skies Logo" class="logo">
+        <div class="site-title">VENTURED SKIES</div>
+      </div>
+      <div class="mobile-toggle">☰</div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="ourServices.html">Services</a></li>
+          <li><a href="works.html" class="active">Works</a></li>
+          <li><a href="contactUs.html">Contact</a></li>
+          <li><a href="order.html" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-page hero-bg-3">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Mission Archives</h1>
+        <div class="underline"></div>
+        <p class="hero-sub">Featured Aerial Intelligence & Cinematography</p>
+      </div>
+    </div>
+  </section>
+
+  <main style="padding-top: 60px; padding-bottom: 60px;">
+    
+    <div class="intro-text-center">
+      <h2 style="font-family:'Cinzel', serif; letter-spacing: 2px;">Currently Under Development.</h2>
+      <p>In development 04-26</p>
+    </div>
+
+    <div class="portfolio-grid">
+      
+      <div class="portfolio-card gsap-fade" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+        <div class="scan-line"></div>
+        <i class="fas fa-lock processing-icon"></i>
+        <h3 class="processing-text">Project Alpha</h3>
+        <p class="processing-sub">Status: Rendering Orthomosaic</p>
+      </div>
+
+      <div class="portfolio-card gsap-fade" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+        <div class="scan-line"></div>
+        <i class="fas fa-video processing-icon"></i>
+        <h3 class="processing-text">Project Bravo</h3>
+        <p class="processing-sub">Status: Color Grading 4K Footage</p>
+      </div>
+
+      <div class="portfolio-card gsap-fade" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+        <div class="scan-line"></div>
+        <i class="fas fa-satellite-dish processing-icon"></i>
+        <h3 class="processing-text">Project Charlie</h3>
+        <p class="processing-sub">Status: Lidar Data Processing</p>
+      </div>
+
+      <div class="portfolio-card gsap-fade" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+        <div class="scan-line"></div>
+        <i class="fas fa-map-marked-alt processing-icon"></i>
+        <h3 class="processing-text">Project Delta</h3>
+        <p class="processing-sub">Status: Topographical Analysis</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2026 Ventured Skies LLC. All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-icon magnet"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon magnet"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon magnet"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="js/style.js"></script>
+    
+</body>
+</html>

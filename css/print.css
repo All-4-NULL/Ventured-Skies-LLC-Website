@@ -1,0 +1,47 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: white;
+  color: black;
+  font-size: 12pt;
+  font-family: serif;
+  line-height: 1.4;
+}
+
+nav, .hero, .overlay-text, .social-links, aside, img, button {
+  display: none !important;
+}
+
+
+h1, h2, h3, h4 {
+  color: black;
+  text-shadow: none;
+}
+
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+
+.page-layout, .sidebar, .content {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  border-top: 1px solid #000;
+  background: none;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
